@@ -1,6 +1,6 @@
 [package]
 name = "fibermc-sdk"
-version = "0.0.3"
+version = "0.0.4"
 authors = ["jp@jpcode.dev"]
 description = "API documentation for FiberMC"
 # Override this license by providing a License Object in the OpenAPI.

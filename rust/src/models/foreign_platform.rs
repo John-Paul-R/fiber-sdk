@@ -15,25 +15,25 @@ use serde_repr::{Serialize_repr, Deserialize_repr};
 #[repr(u32)]
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize_repr, Deserialize_repr)]
 pub enum ForeignPlatform {
-    Variant0,
-    Variant1,
-    Variant2,
+    Invalid,
+    Modrinth,
+    CurseForge,
 
 }
 
 impl ToString for ForeignPlatform {
     fn to_string(&self) -> String {
         match self {
-            Self::Variant0 => String::from("0"),
-            Self::Variant1 => String::from("1"),
-            Self::Variant2 => String::from("2"),
+            Self::Invalid => String::from("0"),
+            Self::Modrinth => String::from("1"),
+            Self::CurseForge => String::from("2"),
         }
     }
 }
 
 impl Default for ForeignPlatform {
     fn default() -> ForeignPlatform {
-        Self::Variant0
+        Self::Invalid
     }
 }
 
