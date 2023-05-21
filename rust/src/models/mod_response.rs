@@ -13,10 +13,10 @@
 
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct ModResponse {
-    #[serde(rename = "id", skip_serializing_if = "Option::is_none")]
-    pub id: Option<uuid::Uuid>,
-    #[serde(rename = "name", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub name: Option<Option<String>>,
+    #[serde(rename = "id")]
+    pub id: uuid::Uuid,
+    #[serde(rename = "name")]
+    pub name: String,
     #[serde(rename = "mrSlug", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
     pub mr_slug: Option<Option<String>>,
     #[serde(rename = "cfSlug", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
@@ -38,10 +38,10 @@ pub struct ModResponse {
 }
 
 impl ModResponse {
-    pub fn new() -> ModResponse {
+    pub fn new(id: uuid::Uuid, name: String) -> ModResponse {
         ModResponse {
-            id: None,
-            name: None,
+            id,
+            name,
             mr_slug: None,
             cf_slug: None,
             summary: None,

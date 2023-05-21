@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | Option<[**uuid::Uuid**](uuid::Uuid.md)> |  | [optional]
-**name** | Option<**String**> |  | [optional]
+**id** | [**uuid::Uuid**](uuid::Uuid.md) |  | 
+**name** | **String** |  | 
 **mr_slug** | Option<**String**> |  | [optional]
 **cf_slug** | Option<**String**> |  | [optional]
 **summary** | Option<**String**> |  | [optional]
