@@ -9,36 +9,25 @@
  */
 
 
+use serde_repr::{Serialize_repr, Deserialize_repr};
+
 /// 
-#[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
+#[repr(u32)]
+#[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize_repr, Deserialize_repr)]
 pub enum FiberCategory {
-    #[serde(rename = "0")]
     Variant0,
-    #[serde(rename = "1")]
     Variant1,
-    #[serde(rename = "2")]
     Variant2,
-    #[serde(rename = "3")]
     Variant3,
-    #[serde(rename = "4")]
     Variant4,
-    #[serde(rename = "5")]
     Variant5,
-    #[serde(rename = "6")]
     Variant6,
-    #[serde(rename = "7")]
     Variant7,
-    #[serde(rename = "8")]
     Variant8,
-    #[serde(rename = "9")]
     Variant9,
-    #[serde(rename = "10")]
     Variant10,
-    #[serde(rename = "11")]
     Variant11,
-    #[serde(rename = "12")]
     Variant12,
-    #[serde(rename = "13")]
     Variant13,
 
 }

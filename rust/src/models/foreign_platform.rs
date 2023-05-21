@@ -9,14 +9,14 @@
  */
 
 
+use serde_repr::{Serialize_repr, Deserialize_repr};
+
 /// 
-#[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
+#[repr(u32)]
+#[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize_repr, Deserialize_repr)]
 pub enum ForeignPlatform {
-    #[serde(rename = "0")]
     Variant0,
-    #[serde(rename = "1")]
     Variant1,
-    #[serde(rename = "2")]
     Variant2,
 
 }

@@ -9,6 +9,8 @@
  */
 
 
+use serde_repr::{Serialize_repr, Deserialize_repr};
+
 
 
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
